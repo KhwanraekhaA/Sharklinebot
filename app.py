@@ -29,8 +29,8 @@ from yolo_predictions import SHARK
 
 
 # Replace with your LINE Bot credentials
-channel_secret = "874c504ea90363d14fb863c86fb083eb"
-channel_access_token = "NJmTXZ/vFgXA6RzArXj6KklilYbzirXCbJ0ONnDbbMI6GOoIes3YcBGr+5n72jjz91+FaolBQBDg+gigkNKrvjla1ZkII4lzz8TJaVio74pnOMB38Hox0IUagMLeYqD/7UJa+6MWQq5mkpWXDtu73wdB04t89/1O/w1cDnyilFU="
+channel_secret = "xxxxxxxx"
+channel_access_token = xxxxxxxxxxx"
 
 line_bot_api = LineBotApi(channel_access_token)
 handler = WebhookHandler(channel_secret)
