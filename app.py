@@ -80,15 +80,17 @@ def handle_image_message(event):
     # ประมวลผลภาพ
     img = cv2.imread(filename_fullpath)
     model(filename_fullpath,img)
-  
 
-    # ส่งรูปภาพกลับไปยังผู้ใช้
+            
+
+    # ส่งข้อความและรูปภาพกลับไปยังผู้ใช้
     dip_url = request.host_url + os.path.join('static', 'tmp', filename_image).replace("\\","/")
     line_bot_api.reply_message(
         event.reply_token,
         [
             TextSendMessage(text='ประมวลผลภาพเรียบร้อยแล้ว'),
-            ImageSendMessage(dip_url, dip_url)
+            ImageSendMessage(dip_url, dip_url),
+            TextSendMessage(text='หาข้อมูลลเพิ่มเติมได้ที่ Search ที่ "เมนู" ')
         ]
     )
     
@@ -100,4 +102,6 @@ def send_static_content(path):
 
 if __name__ == "__main__":          
     app.run()
+
+
 
